@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Test Webapp</title>
+    <script>
+        function accessFrames() {
+            console.log("Access frame start")
+
+            let iframes = document.getElementsByTagName("iframe")
+            for (let i = 0; i < iframes.length; i++) {
+                console.log("iframe: " + iframes.item(i).src)
+            }
+
+            console.log("Access frame done")
+        }
+    </script>
+</head>
+<body style="text-align: center; background-color: black; color: white" onload="accessFrames()">
+
+<h1>Test</h1>
+<iframe src="/test.html" width="50%" height="80" style="border: 3px solid blue; margin: 5px"></iframe>
+
+</body>
+</html>
